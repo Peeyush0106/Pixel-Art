@@ -141,42 +141,52 @@ window.preload = function () {
 			for (var i = 0; i < rows[r].length; i++) {
 				if (rows[r][i] == "0") {
 					// console.log("entered" + i);
+					strokeWeight(0.02)
 					fill("black");
 					rect(i * 10, r * 10, 10, 10);
 				}
 				else if (rows[r][i] == "1") {
+					strokeWeight(0.02)
 					fill("white");
 					rect(i * 10, r * 10, 10, 10);
 				}
 				else if (rows[r][i] == "2") {
+					strokeWeight(0.02)
 					fill("red");
 					rect(i * 10, r * 10, 10, 10);
 				}
 				else if (rows[r][i] == "3") {
+					strokeWeight(0.02)
 					fill("yellow");
 					rect(i * 10, r * 10, 10, 10);
 				}
 				else if (rows[r][i] == "4") {
+					strokeWeight(0.02)
 					fill("orange");
 					rect(i * 10, r * 10, 10, 10);
 				}
 				else if (rows[r][i] == "5") {
+					strokeWeight(0.02)
 					fill("green");
 					rect(i * 10, r * 10, 10, 10);
 				}
 				else if (rows[r][i] == "6") {
+					strokeWeight(0.02)
 					fill("blue");
 					rect(i * 10, r * 10, 10, 10);
 				}
 				else if (rows[r][i] == "7") {
+					strokeWeight(0.02)
 					fill("purple");
 					rect(i * 10, r * 10, 10, 10);
 				}
 				else if (rows[r][i] == "8") {
+					strokeWeight(0.02)
 					fill("pink");
 					rect(i * 10, r * 10, 10, 10);
 				}
 				else if (rows[r][i] == "9") {
+					strokeWeight(0.02)
 					fill("brown");
 					rect(i * 10, r * 10, 10, 10);
 				}
@@ -202,3 +212,12 @@ window.preload = function () {
 window.setup = function () {
 	window.wrappedExportedCode('setup');
 };
+
+function draw() {
+	if (windowHeight < windowWidth) {
+		document.body.style.zoom = (windowHeight / 400) - 0.03
+	}
+	else {
+		document.body.style.zoom = (windowWidth / 400) - 0.03
+	}
+}
